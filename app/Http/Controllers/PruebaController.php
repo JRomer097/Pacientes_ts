@@ -70,7 +70,7 @@ class PruebaController extends Controller
             'altura' => $request -> altura,
             'tipo_de_sangre' => $request -> tipo_de_sangre
         ]);
-
+        $update_id_paciente = Pacientes::select('CALL add_id_paciente()');
         return back();
     }
 
