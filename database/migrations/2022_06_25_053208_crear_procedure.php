@@ -26,7 +26,7 @@ class CrearProcedure extends Migration
                         SET id_personalizada = (SELECT id_pacientePersonalizada FROM id_generados_pacientes WHERE id_paciente = id_registro);
                         UPDATE pacientes SET id_pacientePersonalizada = id_personalizada WHERE id = id_registro;
                         SELECT id, id_pacientePersonalizada FROM pacientes WHERE id_pacientePersonalizada IS NULL LIMIT 1 INTO id_registro, id_pacienteRegistro;
-                        IF (id_registro = "")THEN
+                        IF (id_registro IS NOT NULL)THEN
                             SET id_registro = NULL ;
                         END IF;
                     END WHILE;
