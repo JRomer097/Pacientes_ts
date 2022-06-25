@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PruebaController;
+use App\Http\Controllers\PacientesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,19 +20,19 @@ use App\Http\Controllers\PruebaController;
 //Route::get('/prueba', [PruebaController::class, 'index']);
 
 //Principal
-Route::get('/', [PruebaController::class, 'index'])->name('pacientes.index');
+Route::get('/', [PacientesController::class, 'index'])->name('pacientes.index');
 
 //Editar Pacientes
-Route::get('pacientes/editar/{pacientes}',[PruebaController::class, 'editar'])->name('pacientes.editar');
+Route::get('pacientes/editar/{pacientes}',[PacientesController::class, 'editar'])->name('pacientes.editar');
 
 //Actualiza la informacion del paciente
-Route::get('paciente/editar/{pacientes}', [PruebaController::class, 'update'])->name('pacientes.update');
+Route::get('paciente/editar/{pacientes}', [PacientesController::class, 'update'])->name('pacientes.update');
 
 //Ventana de gráficas
-Route::get('pacientes/graficar/{pacientes}',[PruebaController::class, 'graficar'])->name('grafica.graficar');
+Route::get('pacientes/graficar/{pacientes}',[PacientesController::class, 'graficar'])->name('grafica.graficar');
 
 //Guardar un nuevo paciente
-Route::post('pacientes', [PruebaController::class, 'store'])->name('pacientes.store');
+Route::post('pacientes', [PacientesController::class, 'store'])->name('pacientes.store');
 
 //Borrar un paciente
-Route::delete('pacientes/{pacientes}', [PruebaController::class, 'delete'])->name('pacientes.delete');
+Route::delete('pacientes/{pacientes}', [PacientesController::class, 'delete'])->name('pacientes.delete');
