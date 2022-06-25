@@ -10,11 +10,11 @@
 <body>
 	<div class="row" style="min-height: 695px; margin: auto;">
 		<!--Apartado para las gráficas-->
-		<div class="col-md-8" style="background-color: #FBD603;"> Prueba </div>
+		<div class="col-md-8" style="background-color: #F3F3F3;"> Prueba </div>
 		<!--Apartado para la información del paciente -->
 		<div class="col-md-4" style="background-color: #F3F3F3;">
 			<!--Información del Paciente-->
-			<div class="row" style="min-height: 200px; background-color: #FB6683;">
+			<div class="row" style="min-height: 200px; background-color: #F3F3F3;">
 
 				<div class="container" style="background-color: #F3F3F3; min-width: 75%;">
 					<div class="row">
