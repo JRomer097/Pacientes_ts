@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\registro_pulsera;
+use App\Models\Registro_pulsera;
 use Illuminate\Http\Request;
 
 class RegistroPulseraController extends Controller
@@ -14,7 +14,7 @@ class RegistroPulseraController extends Controller
      */
     public function index()
     {
-        $dato = registro_pulsera::all();
+        $dato = Registro_pulsera::all();
         return $dato;
     }
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pacientes;
-use App\Models\registro_pulsera;
+use App\Models\Registro_pulsera;
 class PacientesController extends Controller
 {
     //Mandamos y mostramos la información de la DB
@@ -27,7 +27,7 @@ class PacientesController extends Controller
         /*return view('grafica', ['datos' => $datos,
                     'registro_pulsera'=>$registro_pulsera]);*/
         //$registro_pulsera = registro_pulsera::where('id_pacientePersonalizada','=',$datos->id_pacientePersonalizada);
-        $registro_pulsera = Pacientes::all();
+        $registro_pulsera = Registro_pulsera::find($datos->id);
         return $registro_pulsera;
     }
 

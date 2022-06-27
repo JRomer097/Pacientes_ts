@@ -19,7 +19,7 @@ use App\Http\Controllers\RegistroPulseraController;
 //});
 
 //Route::get('/prueba', [PruebaController::class, 'index']);
-/*
+
 //Principal
 Route::get('/', [PacientesController::class, 'index'])->name('pacientes.index');
 
@@ -38,5 +38,5 @@ Route::post('pacientes', [PacientesController::class, 'store'])->name('pacientes
 //Borrar un paciente
 Route::delete('pacientes/{pacientes}', [PacientesController::class, 'delete'])->name('pacientes.delete');
 
-//resource*/
-Route::get('/', [RegistroPulseraController::class, 'index']);
+//resource
+//Route::get('/', [RegistroPulseraController::class, 'index']);

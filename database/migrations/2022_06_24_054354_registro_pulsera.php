@@ -13,7 +13,7 @@ class RegistroPulsera extends Migration
      */
     public function up()
     {
-        Schema::create('registro_pulsera', function (Blueprint $table) {
+        Schema::create('registro_pulseras', function (Blueprint $table) {
             $table->id();
             $table->string('id_pacientePersonalizada');
             $table->string('id_pulsera');
