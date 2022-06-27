@@ -36,3 +36,5 @@ Route::post('pacientes', [PacientesController::class, 'store'])->name('pacientes
 
 //Borrar un paciente
 Route::delete('pacientes/{pacientes}', [PacientesController::class, 'delete'])->name('pacientes.delete');
+
+//resource

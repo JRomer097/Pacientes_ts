@@ -58,7 +58,14 @@ class PacientesController extends Controller
             'altura' => 'required',
             'tipo_de_sangre' => 'required|min:2'
             
-        ]);
+        ],  ['nombre_p.required'=>'Necesito un nombre', 
+            'apellidoP_p.required'=>'Necesito un apellido paterno',
+            'apellidoM_p.required'=>'Necesito un apellido materno',
+            'edad.required'=>'Necesito una edad',
+            'peso.required'=>'Necesito un peso',
+            'altura.required'=>'Necesito la altura',
+            'tipo_de_sangre.required'=>'Necesito el tipo de sangre']
+        );
 
         //Guardamos la informción del nuevo paciente al validarlo
         Pacientes::create([
