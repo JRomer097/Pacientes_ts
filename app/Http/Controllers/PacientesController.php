@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pacientes;
+use App\Models\registro_pulsera;
 class PacientesController extends Controller
 {
     //Mandamos y mostramos la información de la DB
@@ -19,8 +20,15 @@ class PacientesController extends Controller
     public function graficar(Pacientes $pacientes)
     {
         $datos = $pacientes;
-        return view('grafica', ['datos' => $datos]);
-        //return $datos;
+        //$registro_pulsera = registro_pulsera::select('registro_pulsera')->WHERE('id_pacientePersonalizada', $datos->id_pacientePersonalizada);
+        /*$registro_pulsera = Pacientes::select("SELECT * FROM registro_pulsera 
+        WHERE id_pacientePersonalizada = ? ", $datos->id_pacientePersonalizada); */
+        //$datos_pulsera = $registro_pulsera;
+        /*return view('grafica', ['datos' => $datos,
+                    'registro_pulsera'=>$registro_pulsera]);*/
+        //$registro_pulsera = registro_pulsera::where('id_pacientePersonalizada','=',$datos->id_pacientePersonalizada);
+        $registro_pulsera = Pacientes::all();
+        return $registro_pulsera;
     }
 
     //Ventana para editar los datos del paciente

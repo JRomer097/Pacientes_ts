@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PacientesController;
+use App\Http\Controllers\RegistroPulseraController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +19,7 @@ use App\Http\Controllers\PacientesController;
 //});
 
 //Route::get('/prueba', [PruebaController::class, 'index']);
-
+/*
 //Principal
 Route::get('/', [PacientesController::class, 'index'])->name('pacientes.index');
 
@@ -37,4 +38,5 @@ Route::post('pacientes', [PacientesController::class, 'store'])->name('pacientes
 //Borrar un paciente
 Route::delete('pacientes/{pacientes}', [PacientesController::class, 'delete'])->name('pacientes.delete');
 
-//resource
+//resource*/
+Route::get('/', [RegistroPulseraController::class, 'index']);

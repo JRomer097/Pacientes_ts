@@ -43,7 +43,9 @@
 			<div style="min-height: 495px; background-color: #F3F3F3; min-width: 100%;">	
 				<div>
 					Estado del paciente
-					
+
+						{{ $registro_pulsera}}
+
 				</div>
 			</div>
 		</div>
